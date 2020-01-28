@@ -64,7 +64,7 @@
 
       <p>
           <label for="Full name">Full name</label><br>
-          <input type="text" id="full name" name="name" required="required" placeholder="First- and Last Name" />
+          <input type="text" id="Full name" name="name" required="required" placeholder="First- and Last Name" />
       </p>
 
       <p>
@@ -73,7 +73,7 @@
 
       <p>
           <label for="Street">Street</label><br>
-          <input type="text" id="street" name="st" placeholder="Street name" />
+          <input type="text" id="Street" name="st" placeholder="Street name" />
       </p>
 
       <p>
@@ -82,19 +82,24 @@
       </p>
 
       <p>
-        <label for="Payment method">Recipient</label><br />
-        <select id="recipient" name="rcp">
-          <option selected="selected">Visa</option>
-          <option>PayPal</option>
-          <option>Swish</option>
-          <option>Credit card</option>
+        <label for="Pm">Recipient</label><br />
+        <select id="Pm" name="rcp">
+          <option selected="selected" value="visa">Visa</option>
+          <option value="payPal">PayPal</option>
+          <option value="swish">Swish</option>
+          <option value="CC">Credit card</option>
         </select>
       </p>
 
-
+      <p>
+          <label for="gd">Gender</label><br>
+          <input type="radio" id="gd" name="gender" value="female"> Female </input>
+          <input type="radio" id="gd" name="gender" value="female"> Male </input>
+          <input type="radio" id="gd" name="gender" checked="checked" value="other"> Other</input>
+      </p>
 
     </section>
-
+    <button type="submit"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRVOokd-ThGx4T-VGjj05OuixbOw6pJOQZNG20M1PVF5igLzWNeA&s" width="20"/>Place an order</button>
     <hr>
     <footer>
       &copy blablabla
