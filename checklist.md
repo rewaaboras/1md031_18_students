@@ -19,7 +19,7 @@ Create an index.html file which contains:
 	- [ ] A name
 	- [ ] An image
 	- [ ] Information about allergies
-- [ ] A section to collect customer information:
+- [X] A section to collect customer information:
 	- [ ] First- and Last Name (in one field)
 	- [ ] E-Mail Address
 	- [ ] Street
