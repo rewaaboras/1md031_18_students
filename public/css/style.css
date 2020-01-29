@@ -1,0 +1,23 @@
+@import url("reset.css");
+@import url("https://fonts.googleapis.com/css?family=Droid+Serif|Share+Tech+Mono");
+
+body {
+    font-family: "Times New Roman";
+    font-size: 16pt;
+}
+
+a, strong, em {
+    color: #0099ff;
+}
+
+
+
+#allergy {
+    font-weight: bold;
+}
+
+p.info,
+#login p {
+    width: 80%;
+    margin: 1vw auto;
+}
