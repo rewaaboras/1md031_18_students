@@ -21,6 +21,14 @@ button:hover {
 
 #headPic {
   opacity: 0.4;
+  width: 100%;
+  height: auto;
+}
+
+h1 {
+  position: absolute;
+  margin-top: -17%;
+  margin-left: 25%
 }
 
 button {
@@ -41,13 +49,51 @@ table {
   vertical-align: middle;
 }
 
-table + section {
+
+
+.table {
+  padding: 40px 20px 40px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 300px 300px 300px;
+}
+
+.h {
+  padding: 1px 50px 4px;
+  text-align: center;
+}
+
+.a {
+  grind-column: 1/ span 1;
+}
+
+.b {
+  grind-column: 2/ span 1;
+}
+
+.c {
+  grind-column: 3/ span 1;
+}
+
+
+.pic {
   padding: 1px 50px 4px;
 }
 
+.pd {
+  padding: 1px 50px 4px;
+}
+
+.burger {
+  background-color: #000000;
+  color: #ffffff;
+  border: 2px dotted #ffffff;
+}
+
 section {
-  margin: 15px 5px;
-  border: 2px dotted #000000;
+  margin: 3px 5px;
+  padding: 5px 15px 5px;
+
 }
 
 .pic {
@@ -56,6 +102,10 @@ section {
 
 .allergy {
     font-weight: bold;
+}
+
+.shipInfo {
+  border: 2px dotted #000000;
 }
 
 p.info,
