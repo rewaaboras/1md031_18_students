@@ -10,9 +10,43 @@ a, strong, em {
     color: #0099ff;
 }
 
+button:hover {
+    background-color: rgb(153,102,153);
+    cursor:pointer;
+}
 
+button {
+  margin: 35px 0px 0px 0px;
+}
 
-#allergy {
+input:hover {
+  cursor:pointer;
+}
+
+option:hover {
+    cursor:pointer;
+}
+
+table {
+  width: 200%
+  margin: 0 auto;
+  vertical-align: middle;
+
+}
+
+table + section {
+  padding: 1px 50px 4px;
+}
+
+section {
+  margin: 15px 5px;
+}
+
+.pic {
+  text-align: center;
+}
+
+.allergy {
     font-weight: bold;
 }
 
