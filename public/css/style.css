@@ -15,8 +15,12 @@ button:hover {
     cursor:pointer;
 }
 
-.head {
-  margin: 20px 30px;
+.headf {
+  margin: 15px 5px;
+}
+
+#headPic {
+  opacity: 0.4;
 }
 
 button {
