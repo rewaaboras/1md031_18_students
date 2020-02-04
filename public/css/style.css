@@ -15,6 +15,10 @@ button:hover {
     cursor:pointer;
 }
 
+.head {
+  margin: 20px 30px;
+}
+
 button {
   margin: 35px 0px 0px 0px;
 }
@@ -28,10 +32,9 @@ option:hover {
 }
 
 table {
-  width: 200%
-  margin: 0 auto;
+  width: 75%;
+  margin: 10px 20px;
   vertical-align: middle;
-
 }
 
 table + section {
@@ -40,6 +43,7 @@ table + section {
 
 section {
   margin: 15px 5px;
+  border: 2px dotted #000000;
 }
 
 .pic {
