@@ -4,6 +4,9 @@
         <title>give me hamburgers</title>
         <meta charset="utf-8"/>
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="js/js_script.js" defer></script>
+        <script src="js/vue_script.js" defer></script>
+        <script src="https://vuejs.org/js/vue.js"></script>
     </head>
     <body>
     <figure class="headf" >
@@ -15,12 +18,15 @@
     </main>
 
     </figure>
-    <section class="burger">
+ <section class="burger">
         <h3 class="headf">Choose a burger</h4>
         <p class= "headf">Which burger are you craving for? choose here</p>
 
-      <div class="table">
-        <div class="h a">Halloumiburgare</div>
+        <div id="table">
+          <div class="prod-name"> {{name}} </div>
+          <div class="prod-img"> <img :src="image" alt="Halloumiburgare" title="Halloumiburgare" width="200"></div>
+  <!--    <div class="table">
+       <div class="h a">Halloumiburgare</div>
         <div class="h b">Smokey Platn Beef</div>
         <div class="h c">Spicy Chicken</div>
         <div class="pic a"> <img src="https://www.max.se/contentassets/b67d3c7259284fa8907374bdf4d205ee/product_gdl-umami-halloumi1.jpg" alt="Halloumiburgare" title="Halloumiburgare" width="200"></div>
@@ -49,9 +55,10 @@
           </li>
          <li>Calouries: 920</li>
          <li>Can be ordered with vegan majo</li>
-       </div>
 
-    </section>
+       </div> -->
+
+    </section>--
 
     <section class="shipInfo">
       <h3>Shipping Information</h4>

@@ -46,7 +46,7 @@ Create a menu.js file which contains:
 - [ ] At least five different burgers with respective attributes
 
 Create a js_script.js file which contains:
-- [ ] A MenuItem constructor
+- [X] A MenuItem constructor
 - [ ] A function that defines at least five different burgers using the MenuItem constructor and adds them to an array
 - [ ] A function that loops through the array and inserts the information to the burger selection section of the index.html file
 - [ ] A function that loads the information from the menu.js json object and inserts the information to the burger selection section of the index.html file
