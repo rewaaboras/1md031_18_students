@@ -1,4 +1,4 @@
-const burger = new Vue({
+/* const burger = new Vue({
   el: '#table',
   data: {
     name: 'Halloumiburgare' ,
@@ -6,3 +6,4 @@ const burger = new Vue({
 
   }
 })
+*/

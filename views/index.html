@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>give me hamburgers</title>
+        <title>BurgerHeaven</title>
         <meta charset="utf-8"/>
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <script src="js/js_script.js" defer></script>
@@ -18,13 +18,31 @@
     </main>
 
     </figure>
- <section class="burger">
+ <section id="prodInfo">
         <h3 class="headf">Choose a burger</h4>
         <p class= "headf">Which burger are you craving for? choose here</p>
 
-        <div id="table">
-          <div class="prod-name"> {{name}} </div>
-          <div class="prod-img"> <img :src="image" alt="Halloumiburgare" title="Halloumiburgare" width="200"></div>
+      <div id="tableID" class="table">
+      <!--     <div v-for="burger in burgers">
+            <h4> {{burger.name}} </h4>
+            <img :id="burger.name" :src="burger.image" w.idth="width">
+            <ul>
+              <li>
+                <input type="checkbox" name="checked" :value="burger.name">
+              </li>
+              <li>
+                <p>  {{burger.ing}} </p>
+              </li>
+              <li>
+                <p>{{burger.kcl}} </p>
+              </li>
+              <li v-if="burger.all_check">
+                <p>{{burger.allergy}}</p>
+              </li>
+            </ul>
+          </div> -->
+        </div>
+      </section>
   <!--    <div class="table">
        <div class="h a">Halloumiburgare</div>
         <div class="h b">Smokey Platn Beef</div>
@@ -58,7 +76,7 @@
 
        </div> -->
 
-    </section>--
+
 
     <section class="shipInfo">
       <h3>Shipping Information</h4>
