@@ -29,7 +29,7 @@ let b3= new menuItem ('Spicy Chicken', "https://www.max.se/contentassets/f735874
 let b4= new menuItem ('Maxbox, Cheeseburgare', "https://www.max.se/contentassets/c97a5fa9ef8e467a8d05f3a17062d51d/product_maxbox-cheeseburgare.jpg",'lactose & gluten',800, 'kids menu with a toy');
 let b5= new menuItem ('Originalburgare',"https://www.max.se/contentassets/a6f88bbdde454ea0a2d499a70128772b/product_originalburgare.jpg",'lactose & gluten', 950);
 
-
+/**
 var burgers = [b1,b2,b3,b4,b5];
 
 for(let burger of burgers) {
@@ -74,4 +74,4 @@ for(let burger of burgers) {
   div.appendChild(list);
   document.getElementById('tableID').appendChild(div);
 
-}
+} */

@@ -23,24 +23,24 @@
         <p class= "headf">Which burger are you craving for? choose here</p>
 
       <div id="tableID" class="table">
-      <!--     <div v-for="burger in burgers">
+          <div v-for="burger in burgers">
             <h4> {{burger.name}} </h4>
-            <img :id="burger.name" :src="burger.image" w.idth="width">
+            <img :id="burger.name" :src="burger.img" :width="width">
             <ul>
               <li>
                 <input type="checkbox" name="checked" :value="burger.name">
               </li>
               <li>
-                <p>  {{burger.ing}} </p>
-              </li>
-              <li>
                 <p>{{burger.kcl}} </p>
               </li>
-              <li v-if="burger.all_check">
+              <li v-if="burger.allergyCheck">
                 <p>{{burger.allergy}}</p>
               </li>
+              <li v-if="burger.otherCheck">
+                <p>{{burger.other}}</p>
+              </li>
             </ul>
-          </div> -->
+          </div>
         </div>
       </section>
   <!--    <div class="table">
