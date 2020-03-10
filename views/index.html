@@ -4,6 +4,7 @@
   <title>BurgerHeaven</title>
   <meta charset="utf-8"/>
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="/socket.io/socket.io.js" defer></script>
   <script type="text/javascript" src="js/menu.js"></script>
   <script src="js/js_script.js" defer></script>
   <script src="js/vue_script.js" defer></script>
@@ -94,15 +95,7 @@ Contains <span class="allergy">lactose & gluten </span>
         <input v-model="costumer.email" type="email" id="email" name="em" required="required" placeholder="E-mail address" />
       </p>
 
-      <p>
-        <label for="Street">Street</label><br>
-        <input v-model="costumer.street" type="text" id="Street" name="st" placeholder="Street name" />
-      </p>
 
-      <p>
-        <label for="hn">House number</label><br>
-        <input v-model="costumer.houseNr" type="number" id="hn" name="hn" placeholder="House number" />
-      </p>
 
       <p>
         <label for="Pm">Recipient</label><br />
@@ -121,6 +114,16 @@ Contains <span class="allergy">lactose & gluten </span>
         <input v-model="costumer.gender" type="radio" id="oth" name="gender" checked="checked" value="other"> Other</input>
       </p>
 
+      <div class="view-box">
+        <div id="dots" v-on:click="addOrder">
+            <div
+              v-for="(order, key) in orders"
+              v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}">
+              {{key}}
+            </div>
+        </div>
+      </div>
+
 
     <button id="order" v-on:click="submit()" ><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRVOokd-ThGx4T-VGjj05OuixbOw6pJOQZNG20M1PVF5igLzWNeA&s" width="20"/>Place an order</button>
   </form>
@@ -128,6 +131,9 @@ Contains <span class="allergy">lactose & gluten </span>
   <section id="displayInfo" v-if="displayInfo">
     {{costumer.name}} , {{costumer.email}} , {{costumer.street}} , {{costumer.houseNr}}
   </section>
+  <div v-for="(order, key) in orders" v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}">
+    {{key}}
+</div>
   <hr>
   <footer>
     &copy blablabla
