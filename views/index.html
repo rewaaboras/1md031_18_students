@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>BurgerHeaven</title>
-        <meta charset="utf-8"/>
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <script src="js/js_script.js" defer></script>
-        <script src="js/vue_script.js" defer></script>
-        <script src="https://vuejs.org/js/vue.js"></script>
-    </head>
-    <body>
-    <figure class="headf" >
+<head>
+  <title>BurgerHeaven</title>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script type="text/javascript" src="js/menu.js"></script>
+  <script src="js/js_script.js" defer></script>
+  <script src="js/vue_script.js" defer></script>
+  <script src="https://vuejs.org/js/vue.js"></script>
+</head>
+<body>
+  <main id="dashbord">
+  <figure class="headf" >
 
-      <img src="https://maplelanes.com/rvc/wp-content/uploads/sites/2/2018/05/food-and-bevarge-header.jpg" id="headPic" overflow:hidden>
+    <img src="https://maplelanes.com/rvc/wp-content/uploads/sites/2/2018/05/food-and-bevarge-header.jpg" id="headPic" overflow:hidden>
 
-    <main>
-        <h1>Welcome to BurgerOnline</h1>
-    </main>
+
+      <h1>Welcome to BurgerOnline</h1>
 
     </figure>
- <section id="prodInfo">
-        <h3 class="headf">Choose a burger</h4>
+    <section id="prodInfo">
+      <h3 class="headf">Choose a burger</h4>
         <p class= "headf">Which burger are you craving for? choose here</p>
 
-      <div id="tableID" class="table">
+        <div class="table">
           <div v-for="burger in burgers">
             <h4> {{burger.name}} </h4>
             <img :id="burger.name" :src="burger.img" :width="width">
             <ul>
               <li>
-                <input type="checkbox" name="checked" :value="burger.name">
+                <input v-model="costumer.order" type="checkbox" name="checked" :value="burger.name">
               </li>
               <li>
                 <p>{{burger.kcl}} </p>
@@ -43,68 +44,69 @@
           </div>
         </div>
       </section>
-  <!--    <div class="table">
-       <div class="h a">Halloumiburgare</div>
-        <div class="h b">Smokey Platn Beef</div>
-        <div class="h c">Spicy Chicken</div>
-        <div class="pic a"> <img src="https://www.max.se/contentassets/b67d3c7259284fa8907374bdf4d205ee/product_gdl-umami-halloumi1.jpg" alt="Halloumiburgare" title="Halloumiburgare" width="200"></div>
-        <div class="pic b"> <img src="https://www.max.se/contentassets/2263da5f8c554c589a635deb450352ab/product_gdl-smokey-chipotle-plant-beef1.jpg" alt= "Smokey Beef humperger" title="Beef humperger" width="200"></div>
-        <div class="pic c"> <img src="https://www.max.se/contentassets/f7358740037f4714b3e51fc9afbe5f2e/product_spicy-chicken1.jpg" alt="Chicken burgare" title="Spicy Chicken" width="200"></div>
-        <div class="pd a">
-          <ul>
-            <li>
-              Contains <span class="allergy">lactose & gluten  </span>
-            </li>
-            <li>Calouries: 839,7</li>
-            <li>Vegetarian</li>
-          </ul>
-        </div>
-        <div class="pd b">
-          <ul>
-          <li>  <span class="allergy">Lactose free </span </li>
-           <li>Calouries: 790</li>
-           <li>Vegan</li>
+      <!--    <div class="table">
+      <div class="h a">Halloumiburgare</div>
+      <div class="h b">Smokey Platn Beef</div>
+      <div class="h c">Spicy Chicken</div>
+      <div class="pic a"> <img src="https://www.max.se/contentassets/b67d3c7259284fa8907374bdf4d205ee/product_gdl-umami-halloumi1.jpg" alt="Halloumiburgare" title="Halloumiburgare" width="200"></div>
+      <div class="pic b"> <img src="https://www.max.se/contentassets/2263da5f8c554c589a635deb450352ab/product_gdl-smokey-chipotle-plant-beef1.jpg" alt= "Smokey Beef humperger" title="Beef humperger" width="200"></div>
+      <div class="pic c"> <img src="https://www.max.se/contentassets/f7358740037f4714b3e51fc9afbe5f2e/product_spicy-chicken1.jpg" alt="Chicken burgare" title="Spicy Chicken" width="200"></div>
+      <div class="pd a">
+      <ul>
+      <li>
+      Contains <span class="allergy">lactose & gluten  </span>
+    </li>
+    <li>Calouries: 839,7</li>
+    <li>Vegetarian</li>
+  </ul>
+</div>
+<div class="pd b">
+<ul>
+<li>  <span class="allergy">Lactose free </span </li>
+<li>Calouries: 790</li>
+<li>Vegan</li>
 
-         </ul>
-        </div>
-        <div class="pd c">
-          <li>
-            Contains <span class="allergy">lactose & gluten </span>
-          </li>
-         <li>Calouries: 920</li>
-         <li>Can be ordered with vegan majo</li>
+</ul>
+</div>
+<div class="pd c">
+<li>
+Contains <span class="allergy">lactose & gluten </span>
+</li>
+<li>Calouries: 920</li>
+<li>Can be ordered with vegan majo</li>
 
-       </div> -->
+</div> -->
 
 
 
-    <section class="shipInfo">
-      <h3>Shipping Information</h4>
-      <p>Please fill in your address information:</p>
+<section class="shipInfo">
+  <h3>Shipping Information</h4>
+    <p>Please fill in your address information:</p>
 
+    <form>
       <p>
-          <label for="Full name">Full name</label><br>
-          <input type="text" id="Full name" name="name" required="required" placeholder="First- and Last Name" />
+        <label for="Full name">Full name</label><br>
+        <input v-model="costumer.name" type="text" id="FullName" name="name" required="required" placeholder="First- and Last Name" />
       </p>
 
       <p>
         <label for="Email">E-mail</label><br>
-          <input type="email" id="email" name="em" required="required" placeholder="E-mail address" />
+        <input v-model="costumer.email" type="email" id="email" name="em" required="required" placeholder="E-mail address" />
       </p>
 
       <p>
-          <label for="Street">Street</label><br>
-          <input type="text" id="Street" name="st" placeholder="Street name" />
+        <label for="Street">Street</label><br>
+        <input v-model="costumer.street" type="text" id="Street" name="st" placeholder="Street name" />
       </p>
 
       <p>
-          <label for="hn">House number</label><br>
-          <input type="number" id="hn" name="hn" placeholder="House number" />
+        <label for="hn">House number</label><br>
+        <input v-model="costumer.houseNr" type="number" id="hn" name="hn" placeholder="House number" />
       </p>
 
       <p>
         <label for="Pm">Recipient</label><br />
-        <select id="Pm" name="rcp">
+        <select v-model="costumer.paymethod" id="Pm" name="rcp">
           <option selected="selected" value="visa">Visa</option>
           <option value="payPal">PayPal</option>
           <option value="swish">Swish</option>
@@ -113,17 +115,23 @@
       </p>
 
       <p>
-          <label for="gd">Gender</label><br>
-          <input type="radio" id="gd" name="gender" value="female"> Female </input>
-          <input type="radio" id="gd" name="gender" value="female"> Male </input>
-          <input type="radio" id="gd" name="gender" checked="checked" value="other"> Other</input>
+        <label for="gd">Gender</label><br>
+        <input v-model="costumer.gender" type="radio" id="fe" name="gender" value="female"> Female </input>
+        <input v-model="costumer.gender" type="radio" id="m" name="gender" value="male"> Male </input>
+        <input v-model="costumer.gender" type="radio" id="oth" name="gender" checked="checked" value="other"> Other</input>
       </p>
 
-    </section>
-    <button type="submit"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRVOokd-ThGx4T-VGjj05OuixbOw6pJOQZNG20M1PVF5igLzWNeA&s" width="20"/>Place an order</button>
-    <hr>
-    <footer>
-      &copy blablabla
-    </footer>
-    </body>
+
+    <button id="order" v-on:click="submit()" ><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRVOokd-ThGx4T-VGjj05OuixbOw6pJOQZNG20M1PVF5igLzWNeA&s" width="20"/>Place an order</button>
+  </form>
+  </section>
+  <section id="displayInfo" v-if="displayInfo">
+    {{costumer.name}} , {{costumer.email}} , {{costumer.street}} , {{costumer.houseNr}}
+  </section>
+  <hr>
+  <footer>
+    &copy blablabla
+  </footer>
+</main>
+</body>
 </html>
