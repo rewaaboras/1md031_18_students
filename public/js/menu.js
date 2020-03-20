@@ -1,7 +1,7 @@
 let burgers = [
   {
   "name": "Halloumiburgare",
-  "kCal": 850,
+  "kCal": "850",
   "allergyCheck": true,
   "allergy": "gluten & lactose",
   "img": "https://www.max.se/contentassets/b67d3c7259284fa8907374bdf4d205ee/product_gdl-umami-halloumi1.jpg",
@@ -10,7 +10,7 @@ let burgers = [
   } ,
   {
   "name": "Smokey Plant Beef",
-  "kcl": 790,
+  "kCal": "790",
   "allergyCheck": true,
   "allergy": "gluten",
   "img": "https://www.max.se/contentassets/2263da5f8c554c589a635deb450352ab/product_gdl-smokey-chipotle-plant-beef1.jpg",
@@ -20,7 +20,7 @@ let burgers = [
 },
 {
 "name": "Spicy Chicken",
-"kCal": 920,
+"kCal": "920",
 "allergyCheck": true,
 "allergy": "gluten",
 "img": "https://www.max.se/contentassets/f7358740037f4714b3e51fc9afbe5f2e/product_spicy-chicken1.jpg",
@@ -29,7 +29,7 @@ let burgers = [
 },
 {
 "name": "Maxbox, Cheeseburgare",
-"kCal": 810,
+"kCal": "810",
 "allergyCheck": true,
 "allergy": "gluten & lactose",
 "img": "https://www.max.se/contentassets/b67d3c7259284fa8907374bdf4d205ee/product_gdl-umami-halloumi1.jpg",
@@ -38,7 +38,7 @@ let burgers = [
 },
 {
 "name": "Originalburgare",
-"kCal": 950,
+"kCal": "950",
 "allergyCheck": true,
 "allergy": "gluten & lactose",
 "img": "https://www.max.se/contentassets/a6f88bbdde454ea0a2d499a70128772b/product_originalburgare.jpg",

@@ -12,9 +12,17 @@ var socket = io();
       email: '',
       paymethod: '',
       gender: '',
-      order: ''
+      order: {}
     },
     displayInfo: false,
+    theOrder: {
+      orderId: '',
+      details: {
+        x:0,
+        y:0
+      },
+      orderItems: {},
+    }
 },
 
 created: function () {
@@ -29,7 +37,7 @@ created: function () {
 
   methods: {
     submit: function() {
-      console.log(this.costumer),
+      console.log(this.costumer);
       this.displayInfo = true;
     },
     getNext: function () {
@@ -38,14 +46,30 @@ created: function () {
       }, 0);
       return lastOrder + 1;
     },
-    addOrder: function (event) {
+    displayOrder: function (event) {
+      console.log("inisde function");
       var offset = {x: event.currentTarget.getBoundingClientRect().left,
                     y: event.currentTarget.getBoundingClientRect().top};
-      socket.emit("addOrder", { orderId: this.getNext(),
-                                details: { x: event.clientX - 10 - offset.x,
-                                           y: event.clientY - 10 - offset.y },
-                                orderItems: ["Beans", "Curry"]
+
+      this.theOrder.details= { x: event.clientX - 10 - offset.x,
+                              y: event.clientY - 10 - offset.y };
+
+
+      socket.emit("addOrder", { details: { x: event.clientX - 10 - offset.x,
+                                          y: event.clientY - 10 - offset.y },
+                              });
+    },
+    addOrder: function () {
+      console.log("in add order func");
+      this.theOrder.orderId= this.getNext();
+      this.theOrder.orderItems= this.costumer.order;
+      console.log(this.theOrder.orderId);
+      console.log(this.theOrder.orderItems);
+      socket.emit("addOrder", { orderId: '',
+                                details: '',
+                                orderItems: ''
                               });
     }
+
   }
 })
